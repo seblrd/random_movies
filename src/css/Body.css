@@ -1,0 +1,21 @@
+.cards{
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  max-width:40em;
+  max-height: 20em;
+  margin: 0.5em;
+  overflow: hidden;
+}
+  .cards_containers{
+  display: flex;
+  flex-wrap: wrap;
+}
+.card_title{
+}
+.container_pic{
+}
+.card_pic{
+  object-fit: contain;
+  width: 40%;
+}
