@@ -5,8 +5,13 @@ import { Body } from "./Components/Body.js"
 function App() {
   return (
     <div>
-      <HeaderBar />
-      <Body />
+      <div className="HeaderBar">
+        <HeaderBar />
+      </div>
+      <div className="Body">
+        <Body />
+
+      </div>
     </div>
   )
 }

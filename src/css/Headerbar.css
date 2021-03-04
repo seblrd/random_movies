@@ -1,3 +1,36 @@
-.headerBar{
-    display: flex;
-  }
+.headBar{
+  display: flex;
+  flex-direction: row;
+  width:80%;
+  height:100%;
+  align-items: flex-end;
+}
+.headBar > h1{
+  flex: 3;
+  margin: auto;
+  vertical-align: middle;
+
+}
+.button_list{
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+.headBar button{
+  background-color: #103847;
+  border: none;
+  border-bottom: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin: 0.2em;
+  margin-bottom: 0;
+  cursor: pointer;
+  padding: 1em 2em;
+  border-radius:0.5em;
+  transition-duration: 0.4s;
+}
+.headBar button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
