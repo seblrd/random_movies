@@ -13,6 +13,7 @@ function fetch_data(url) {
             console.log(error.message, `\n for url ${url}`);
         });
 }
+/* eslint-disable import/no-anonymous-default-export*/
 export default {
     get_popular_movies: () => {
         const url = get_api_request_url('movie/popular');
