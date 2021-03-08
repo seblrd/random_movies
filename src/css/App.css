@@ -1,2 +1,6 @@
 @import "./Headerbar.css";
 @import "./Body.css";
+
+.HeaderBar, .cards, .popup_content{
+    background-color:  rgb(99, 0, 0);
+  }

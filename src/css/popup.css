@@ -1,0 +1,139 @@
+
+.popup_movie_details {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.795); /* Black w/ opacity */
+}
+.popup_content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding:1em;
+    border: solid 0.1em;
+    border-color: rgb(230, 166, 5);
+    border-radius: 0.1em;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-height: fit-content;
+    max-width: fit-content;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: right;
+    position: fixed;
+    margin: auto 75%;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.popup_paragraph{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 60%;
+    align-content: space-around;
+    width:auto;
+    height: inherit;
+    margin-left:1em;
+}
+.popup_paragraph p,a{
+flex:1;
+}
+.popup_title{
+    display: flex;
+    flex-flow: wrap row;
+    max-width: inherit;
+    align-items: center;
+}
+.popup_title> h3, p{
+    margin-top:auto;
+    vertical-align: baseline;
+}
+#note{
+    color: green !important;
+    margin-left: 1em;
+    font-size: 1.1em;
+    font-style:italic;
+}
+.popup_title u{
+    font-size: 0.8em;
+}
+.popup_paragraph u{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.popup_paragraph > p {
+    margin-bottom: 0.5em;
+}
+.popup_pic{
+max-width:100%;
+background-color: black;
+height: 120%;
+}
+.popup_pic img{
+object-fit: contain;
+height: 16em;
+width: 100%;
+}
+.popup_body{
+display:flex;
+flex-flow: row;
+justify-content: left;
+max-width:100%;
+}
+.popup_head{
+display: flex;
+flex-direction: column;
+border-bottom: thick double ;
+margin-bottom: 0.5em;
+border-color: black;
+border-width: 0.2em;
+height: 100%;
+}
+.popup_head > p{
+font-style: italic;
+margin-bottom: 0.5em ;
+}
+
+@media only screen and (max-width: 1200px) {
+.popup_body{
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.popup_content{
+    display: flex;
+    max-width: 50%;
+}
+.popup_paragraph{
+    max-width: 100%;
+}
+.popup_pic{
+    max-width:100%;
+}
+.close {
+    margin: auto 45%;
+    }
+}
+@media only screen and (max-width: 1024px) {
+.close {
+    margin: auto 44%;
+    }
+}
+@media only screen and (max-width: 640px) {
+.close {
+    margin: auto 40%;
+    }
+}

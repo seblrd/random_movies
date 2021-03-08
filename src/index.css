@@ -1,20 +1,26 @@
+@font-face {
+  font-family: "JackInput";
+  src: url("./fonts/JackInput.TTF") format("truetype")
+ }
+
 *{
+  color:rgb(219, 163, 22);
   box-sizing: border-box;
   margin: 0;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "JackInput",-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin:0;
+  background-color:black;
 }
 .HeaderBar{
   display: flex;
   width: 100%;
   height: 8em;
-  background-color: teal;
   justify-content: center;
 }
 .Body{
