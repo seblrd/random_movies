@@ -28,12 +28,10 @@ export class Body extends React.Component {
             if (e.target.className === "popup_movie_details") {
                 close_popup()
             }
-            console.log(e.target.className)
         };
         const genres_movie = () => {
             let genre_list = ""
             let movie = this.state.target_movie_data;
-            console.log("target movie", movie)
             for (let genre in movie.genres) {
                 var genre_movie = movie.genres[genre].name
                 if (genre_list === "") { genre_list += `${genre_movie}` }
@@ -44,13 +42,13 @@ export class Body extends React.Component {
 
         return (
             <div className="popup_movie_details" style={style} onClick={click_outside}>
-                <div class="popup_content">
+                <div className="popup_content">
                     <div className="popup_head">
                         <div className="popup_title">
                             <h3>{movie.title} {this.display_original_name(movie)}
                             </h3>
                             <p id="note"><b>{movie.vote_average}/10 (<u>{movie.vote_count} votes</u>)</b></p>
-                            <span class="close" onClick={close_popup}>&times;</span>
+                            <span className="close" onClick={close_popup}>&times;</span>
                         </div>
                         <p>{this.movie_tagline(movie.tagline)}</p>
                     </div>
