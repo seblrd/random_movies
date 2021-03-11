@@ -22,14 +22,13 @@ export class Popup extends React.Component {
             this.display_movie_details()
         }
     }
-    componentDidMount() { this.display_movie_details() }
     popup_windows() {
         const movie = this.state.target_movie_data;
-        var test = "" + String(movie.backdrop_path)
-        var img_url = `https://image.tmdb.org/t/p/w500/${test}`
+        var img_url = `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`
+        if (movie.backdrop_path === undefined) { img_url = "/favicon.ico" }
         var style = this.props.style_popup
         const close_popup = () => {
-            this.props.display_popup("none", 0);
+            this.props.display_popup("none", this.props.movie_id);
         }
         const click_outside = e => {
             if (e.target.className === "popup_movie_details") {

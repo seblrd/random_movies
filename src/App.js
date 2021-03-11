@@ -19,13 +19,13 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <Popup movie_id={this.state.movie_id} style_popup={this.state.style_popup} display_popup={this.handle_popup_display} />
         <div className="HeaderBar">
-          <HeaderBar />
+          <HeaderBar display_popup={this.handle_popup_display} />
         </div>
         <div className="Body">
           <Body display_popup={this.handle_popup_display} />
         </div>
+        <Popup movie_id={this.state.movie_id} style_popup={this.state.style_popup} display_popup={this.handle_popup_display} />
       </div>
     )
   }

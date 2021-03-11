@@ -8,7 +8,6 @@ function get_api_request_url(request) {
 function fetch_data(url) {
     return fetch(url)
         .then(data => { console.log(data.status); return data.json() })
-        .then(result => { return result })
         .catch(error => {
             console.log(error.message, `\n for url ${url}`);
         });
@@ -22,5 +21,13 @@ export default {
     get_one_movie: (id_film) => {
         const url = get_api_request_url(`movie/${id_film}`);
         return fetch_data(url);
+    },
+    get_random_movie: (number_page) => {
+        const url = `${get_api_request_url('movie/popular')}&page=${number_page}`;
+        return fetch_data(url).then(response => { return response.results });
+    },
+    get_max_number_pages_popular_movies: () => {
+        const url = get_api_request_url('movie/popular');
+        return fetch_data(url).then(data => { return data.total_pages });
     }
 }
