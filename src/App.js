@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import React from 'react';
+import { HeaderBar } from "./Components/HeaderBar.js"
+import { Body } from "./Components/Body.js"
+import { Popup } from "./Components/Popup.js"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handle_popup_display = this.handle_popup_display.bind(this);
+    this.state = {
+      style_popup: { display: "none" },
+      movie_id: 458576,
+    };
+  }
+  handle_popup_display(style, id) {
+    this.setState({ style_popup: { display: `${style}` }, movie_id: id });
+  }
+  render() {
+    return (
+      <div>
+        <div className="HeaderBar">
+          <HeaderBar display_popup={this.handle_popup_display} />
+        </div>
+        <div className="Body">
+          <Body display_popup={this.handle_popup_display} />
+        </div>
+        <Popup movie_id={this.state.movie_id} style_popup={this.state.style_popup} display_popup={this.handle_popup_display} />
+      </div>
+    )
+  }
 }
-
-export default App;

@@ -1,0 +1,71 @@
+@import './popup.css';
+.Body{
+  margin-top: 1.5em;
+}
+.cards_containers{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+.cards{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  border: solid;
+  color: rgb(129, 0, 0);
+
+  border-radius: 0.2em;
+  width:25em;
+  height: 25em;
+  margin: 0.5em;
+  overflow: hidden;
+}
+.cards:hover{
+  border-radius: 0.8em;
+  color:rgb(230, 166, 5);
+}
+
+.card_title{
+  height: auto;
+  margin: 0.5em;
+  display: flex;
+}
+.card_title >h3> u{
+  font-size: 0.7em;
+  margin-left: 0.5em;
+  font-style: italic;
+}
+.card_body{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.card_pic{
+  flex:1;
+  margin: auto;
+  background-color: black;
+}
+.card_pic >img{
+  object-fit: contain;
+  height: 16em;
+  width: 100%;
+}
+.card_description{
+  flex:2;
+  margin: 0.5em;
+  display: -webkit-box;
+  max-height: 6em;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+h3{
+  font-size: 1.5em;
+  margin-bottom: auto;
+}
+.u{
+  font-size: 0.8em;
+  font-style: italic;
+}
